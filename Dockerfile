@@ -3,7 +3,8 @@ RUN TINI_VERSION="v0.13.2" && \
     TINI_REAL_VERSION="0.13.2" && \
     TINI_BUILD="/tmp/tini" && \
     echo "Installing build dependencies" && \
-    TINI_DEPS="gcc cmake make git rpm-build glibc-static curl tar libcap-devel python-devel" && \
+    TINI_DEPS="which gcc cmake make git rpm-build glibc-static curl tar libcap-devel python-devel" && \
+    yum update -y && \
 yum history new || \
 yum history new && \
 mv /sbin/weak-modules /sbin/weak-modules.tmp && \

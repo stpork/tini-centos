@@ -3,6 +3,7 @@ IMAGE_NAME = tini-centos
 .PHONY: build
 build:
 	docker build -t $(IMAGE_NAME) .
+	docker tag ${IMAGE_NAME} stpork/${IMAGE_NAME}
 
 .PHONY: test
 test:
